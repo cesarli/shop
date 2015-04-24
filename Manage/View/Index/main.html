@@ -21,13 +21,32 @@
     
     <div class="welinfo">
     <span><img src="TMPL_MAN_IMAGES/sun.png" alt="天气" /></span>
-    <b>Admin早上好，欢迎使用信息管理系统</b>(admin@uimaker.com)
+    <b>{$user_info.auth_name}
+        <?php
+            $hour = date("H",time());
+            if(18<=$hour && $hour<=24){
+                $tips = '晚上';
+            }elseif(1<=$hour && $hour<=5){
+                $tips = '凌晨';
+            }elseif(6<=$hour && $hour<=8){
+                $tips = '早上';
+            }elseif(9<=$hour && $hour<=11){
+                $tips = '上午';
+            }elseif(12<=$hour && $hour<=13){
+                $tips = '中午';
+            }elseif(14<=$hour && $hour<=17){
+                $tips = '下午';
+            }else{
+                $tips = '你';
+            }
+            echo $tips;
+        ?>好，欢迎使用信息管理系统</b>({$user_info.auth_email})
     <a href="#">帐号设置</a>
     </div>
     
     <div class="welinfo">
     <span><img src="TMPL_MAN_IMAGES/time.png" alt="时间" /></span>
-    <i>您上次登录的时间：2013-10-09 15:22</i> （不是您登录的？<a href="#">请点这里</a>）
+    <i>您上次登录的时间：{$user_info.last_login|date="Y-m-d H:i:s",###}</i> （不是您登录的？<a href="#">请点这里</a>）
     </div>
     
     <div class="xline"></div>

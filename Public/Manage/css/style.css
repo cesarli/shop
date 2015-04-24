@@ -259,7 +259,7 @@ h2{font-weight:normal;}
 
 /*imgtable*/
 .imgtable{width:100%;border:solid 1px #cbcbcb; }
-.imgtable th{background:url(../images/th.gif) repeat-x; height:34px; line-height:34px; border-bottom:solid 1px #b6cad2; text-indent:21px; text-align:left;}
+.imgtable th{background:url(../images/th.gif) repeat-x; height:34px; line-height:34px; border-bottom:solid 1px #b6cad2; text-indent:21px; text-align:center;}
 .imgtable td{line-height:20px; text-indent:21px; border-right: dotted 1px #c7c7c7;}
 .imgtable td img{margin:10px 20px 10px 0;}
 .imgtable td p{color:#919191;}
@@ -267,7 +267,7 @@ h2{font-weight:normal;}
 .imgtd{text-indent:0;}
 .imgtable tbody tr.odd{background:#f5f8fa;}
 .imgtable tbody tr:hover{background:#e5ebee;}
-
+.height50{height: 50px; font-size: 16px; text-align: center}
 /*tab*/
 .itab{height:36px; border-bottom:solid 1px #d0dee5; position:relative; border-left:solid 1px #d3dbde;}
 .itab ul li{float:left;height:37px; line-height:37px; background:url(../images/itabbg.png) repeat-x; border-right:solid 1px #d3dbde;}

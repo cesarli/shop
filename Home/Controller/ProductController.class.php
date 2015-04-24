@@ -1,7 +1,7 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
-class ProductController extends Controller {
+class ProductController extends BaseController {
     public function plist(){
 
         $this->display('plist');

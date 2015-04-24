@@ -1,7 +1,7 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
-class CompanyController extends Controller {
+class CompanyController extends BaseController {
     public function news()
     {
 
