@@ -9,4 +9,4 @@ define('APP_PATH','./');
 // 定义应用目录
 
 // 引入ThinkPHP入口文件
-require '../../Framework/ThinkPHP/ThinkPHP.php';
+require './ThinkPHP/ThinkPHP.php';
