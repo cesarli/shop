@@ -7,6 +7,6 @@ define('APP_DEBUG',True);
 define('BIND_MODULE','Home');
 define('APP_PATH','./');
 // 定义应用目录
-
+exit;
 // 引入ThinkPHP入口文件
 require './ThinkPHP/ThinkPHP.php';

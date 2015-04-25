@@ -17,24 +17,26 @@ class GoodsController extends BaseController {
             $goods_num = I('post.goods_num',0);
             $goods_class = I('post.goods_class',0);
             $is_on_sale = I('post.is_on_sale',0);
-            $goods_mar_price = I('post.goods_mar_price',0);
-            $goods_price = I('post.goods_price',0);
-            $goods_mem_price = I('post.goods_mem_price',0);
+            $goods_ct_price = I('post.goods_ct_price',0);
+            $goods_cu_price = I('post.goods_cu_price',0);
             $goods_ag_price = I('post.goods_ag_price',0);
+            $goods_mem_price = I('post.goods_mem_price',0);
+            $goods_price = I('post.goods_price',0);
             $is_discount = I('post.is_discount',0);
             $goods_discount = I('post.goods_discount',0);
             $goods_sort = I('post.goods_sort',0);
-            $goods_des = I('post.goods_des','');
+            $goods_des = I('post.goods_des','','trim');
             $data = array(
                 'goods_id' => $goods_id,
                 'goods_name' => $goods_name,
                 'goods_num' => $goods_num,
                 'goods_class' => $goods_class,
                 'is_on_sale' => $is_on_sale,
-                'goods_mar_price' => $goods_mar_price,
-                'goods_price' => $goods_price,
-                'goods_mem_price' => $goods_mem_price,
+                'goods_ct_price' => $goods_ct_price,
+                'goods_cu_price' => $goods_cu_price,
                 'goods_ag_price' => $goods_ag_price,
+                'goods_mem_price' => $goods_mem_price,
+                'goods_price' => $goods_price,
                 'is_discount' => $is_discount,
                 'goods_discount' => $goods_discount,
                 'goods_sort' => $goods_sort,
@@ -56,7 +58,7 @@ class GoodsController extends BaseController {
             if($model->save($data)){
                 $this->success('修改成功',U('Goods/GoodsList'));
             }else{
-                $this->error('修改失败,请检查是否有非法字符',U('Goods/addGoods'));
+                $this->error('修改失败,请检查是否有非法字符');
             }
             exit;
         }
@@ -77,27 +79,29 @@ class GoodsController extends BaseController {
             $goods_num = I('post.goods_num',0);
             $goods_class = I('post.goods_class',0);
             $is_on_sale = I('post.is_on_sale',0);
-            $goods_mar_price = I('post.goods_mar_price',0);
-            $goods_price = I('post.goods_price',0);
-            $goods_mem_price = I('post.goods_mem_price',0);
+            $goods_ct_price = I('post.goods_ct_price',0);
+            $goods_cu_price = I('post.goods_cu_price',0);
             $goods_ag_price = I('post.goods_ag_price',0);
+            $goods_mem_price = I('post.goods_mem_price',0);
+            $goods_price = I('post.goods_price',0);
             $is_discount = I('post.is_discount',0);
             $goods_discount = I('post.goods_discount',0);
             $goods_sort = I('post.goods_sort',0);
-            $goods_desc = I('post.goods_desc','');
+            $goods_des = I('post.goods_des','','trim');
             $data = array(
                 'goods_name' => $goods_name,
                 'goods_num' => $goods_num,
                 'goods_class' => $goods_class,
                 'is_on_sale' => $is_on_sale,
-                'goods_mar_price' => $goods_mar_price,
-                'goods_price' => $goods_price,
-                'goods_mem_price' => $goods_mem_price,
+                'goods_ct_price' => $goods_ct_price,
+                'goods_cu_price' => $goods_cu_price,
                 'goods_ag_price' => $goods_ag_price,
+                'goods_mem_price' => $goods_mem_price,
+                'goods_price' => $goods_price,
                 'is_discount' => $is_discount,
                 'goods_discount' => $goods_discount,
                 'goods_sort' => $goods_sort,
-                'goods_desc' => $goods_desc,
+                'goods_des' => $goods_des,
                 'create_time' => time(),
             );
             $upload = new \Think\Upload();

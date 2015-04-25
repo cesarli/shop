@@ -24,7 +24,7 @@
         <li>
             <label>商品名称</label>
             <input name="goods_name" type="text" class="dfinput" />
-            <i>名称不能超过10个字符</i>
+            <i>名称不能超过20个字符</i>
         </li>
         <li>
             <label>商品库存</label>
@@ -53,20 +53,25 @@
             </cite>
         </li>
         <li>
-            <label>市场价格</label>
-            <input name="goods_mar_price" type="text" class="dfinput" />
+            <label>市经价</label>
+            <input name="goods_ct_price" type="text" class="dfinput" />
         </li>
         <li>
-            <label>零售价格</label>
-            <input name="goods_price" type="text" class="dfinput" />
+            <label>县经价</label>
+            <input name="goods_cu_price" type="text" class="dfinput" />
         </li>
         <li>
-            <label>会员价格</label>
-            <input name="goods_mem_price" type="text" class="dfinput" />
-        </li>
-        <li>
-            <label>会员价格</label>
+            <label>普经价</label>
             <input name="goods_ag_price" type="text" class="dfinput" />
+        </li>
+        <li>
+            <label>会员价</label>
+            <input name="goods_mem_price" type="text" class="dfinput" />
+            <i></i>
+        </li>
+        <li>
+            <label>零售价</label>
+            <input name="goods_price" type="text" class="dfinput" />
             <i></i>
         </li>
         <li>
@@ -97,10 +102,7 @@
             <input name="goods_img_ori" type="file" />
         </li>
         <li>
-            <label>商品描述</label>
-            <textarea name="goods_des" style="width: 360px;height: 200px;">
-
-            </textarea>
+            <label>商品描述</label><textarea name="goods_des" style="width: 360px;height: 200px;"></textarea>
         </li>
     <li><label>&nbsp;</label><input name="" type="submit" class="btn" value="确认保存"/></li>
     </ul>
