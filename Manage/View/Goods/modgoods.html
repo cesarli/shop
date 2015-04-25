@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="TMPL_MAN_CSS/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">表单</a></li>
+    </ul>
+    </div>
+
+    <div class="formbody">
+    
+    <div class="formtitle"><span>基本信息</span></div>
+    <form action="{:U('Goods/modGoods','goods_id='.$goods_info['goods_id'])}" method="post" enctype="multipart/form-data">
+    <ul class="forminfo">
+        <li>
+            <label>商品名称</label>
+            <input name="goods_name" type="text" class="dfinput" value="{$goods_info.goods_name}" />
+            <i>名称不能超过10个字符</i>
+        </li>
+        <li>
+            <label>商品库存</label>
+            <input name="goods_num" type="text" class="dfinput" value="{$goods_info.goods_num}" />
+        </li>
+        <li>
+            <label>商品分类</label>
+            <select name="goods_class" class="dfinput">
+                <option value="0">顶级分类</option>
+                <foreach name="class_info" item="class" >
+                    <if condition="$class.class_id eq $goods_info['goods_class']">
+                        <option value="{$class.class_id}" selected="selected">
+                            {$class.deep|str_repeat="&nbsp;&nbsp;&nbsp;",###}
+                            {$class.class_name}
+                        </option>
+                        <else />
+                        <option value="{$class.class_id}">
+                            {$class.deep|str_repeat="&nbsp;&nbsp;&nbsp;",###}
+                            {$class.class_name}
+                        </option>
+                    </if>
+                </foreach>
+            </select>
+        </li>
+        <li>
+            <label>是否上架</label>
+            <cite>
+                <label>
+                    <input name="is_on_sale" type="radio" value="1" checked="checked" />
+                    是
+                </label>
+                <label>
+                    <input name="is_on_sale" type="radio" value="0" />
+                    否
+                </label>
+            </cite>
+        </li>
+        <li>
+            <label>市场价格</label>
+            <input name="goods_mar_price" type="text" class="dfinput" value="{$goods_info.goods_mar_price}" />
+        </li>
+        <li>
+            <label>零售价格</label>
+            <input name="goods_price" type="text" class="dfinput" value="{$goods_info.goods_price}" />
+        </li>
+        <li>
+            <label>经销商价</label>
+            <input name="goods_mem_price" type="text" class="dfinput" value="{$goods_info.goods_ag_price}" />
+        </li>
+        <li>
+            <label>会员价格</label>
+            <input name="goods_ag_price" type="text" class="dfinput" value="{$goods_info.goods_mem_price}" />
+            <i></i>
+        </li>
+        <li>
+            <label>是否促销</label>
+            <cite>
+                <label>
+                    <input name="is_discount" type="radio" value="1" />
+                    是
+                </label>
+                <label>
+                    <input name="is_discount" type="radio" value="0" checked="checked" />
+                    否
+                </label>
+            </cite>
+        </li>
+        <li>
+            <label>促销价格</label>
+            <input name="goods_discount" type="text" class="dfinput" value="{$goods_info.goods_discount}" />
+            <i></i>
+        </li>
+        <li>
+            <label>商品排序</label>
+            <input name="goods_sort" type="text" class="dfinput" value="{$goods_info.goods_sort}" />
+            <i></i>
+        </li>
+        <li>
+            <label>商品图片</label>
+            <input name="goods_img_ori" type="file" />
+        </li>
+        <li>
+            <label>商品描述</label>
+            <textarea name="goods_des" style="width: 360px;height: 200px;">
+                {$goods_info.goods_des}
+            </textarea>
+        </li>
+    <li><label>&nbsp;</label><input name="" type="submit" class="btn" value="确认保存"/></li>
+    </ul>
+    </form>
+    
+    </div>
+</body>
+</html>

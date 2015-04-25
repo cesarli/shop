@@ -113,6 +113,11 @@ h2{font-weight:normal;}
 .tablelist tbody tr:hover{background:#e5ebee;}
 .sort{padding-left:3px;}
 
+
+
+.operation{float:left; margin-left: 60px}
+.operation li{background:url(../images/toolbg.gif) repeat-x; line-height:33px; height:33px; border:solid 1px #d3dbde; float:left; padding-right:10px; margin-right:5px;border-radius: 3px; behavior:url(js/pie.htc); cursor:pointer;}
+.operation li span{float:left; margin-left:3px; margin-right:5px; margin-top:5px; width: 24px;}
 /*page*/
 .pagin{position:relative;margin-top:10px;padding:0 12px;}
 .pagin .blue{color:#056dae;font-style:normal;}
@@ -261,7 +266,7 @@ h2{font-weight:normal;}
 .imgtable{width:100%;border:solid 1px #cbcbcb; }
 .imgtable th{background:url(../images/th.gif) repeat-x; height:34px; line-height:34px; border-bottom:solid 1px #b6cad2; text-indent:21px; text-align:center;}
 .imgtable td{line-height:20px; text-indent:21px; border-right: dotted 1px #c7c7c7;}
-.imgtable td img{margin:10px 20px 10px 0;}
+.imgtable td img{margin:0px 20px 10px 0;}
 .imgtable td p{color:#919191;}
 .imgtable td i{font-style:normal; color:#ea2020;}
 .imgtd{text-indent:0;}
