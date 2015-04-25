@@ -24,38 +24,12 @@
 <div id="nav">
     <div class="nav_main">
         <ul>
-            <li class="menua"><a href="/index.html">
-                <h1>首页</h1>
-                <h2>HOME</h2>
+            <foreach name="bar_list" item="bar" >
+            <?php $controller = $bar['controller'];$action = $bar['action']; $full = $controller.'/'.$action; ?>
+            <li class="menu"><a href="{:U($full)}">
+                <h2>{$bar.bar_name}</h2>
             </a></li>
-            <li class="menu"><a href="/Index/test">
-                <h1>关于良仓</h1>
-                <h2>ABOUT US</h2>
-            </a></li>
-            <li class="menu"><a href="devel.html">
-                <h1>良仓开发</h1>
-                <h2>DEVELOPMENT</h2>
-            </a></li>
-            <li class="menu"><a href="finance.html">
-                <h1>良仓金融</h1>
-                <h2>FINANCE</h2>
-            </a></li>
-            <li class="menu"><a href="market.html">
-                <h1>良仓市场运行</h1>
-                <h2>MARKET OPERATION</h2>
-            </a></li>
-            <li class="menu"><a href="plumbing.html">
-                <h1>良仓水暖</h1>
-                <h2>PLUMBING</h2>
-            </a></li>
-            <li class="menu"><a href="coal.html">
-                <h1>良仓煤业</h1>
-                <h2>COAL</h2>
-            </a></li>
-            <li class="menu"><a href="join.html">
-                <h1>加入良仓</h1>
-                <h2>JOIN US</h2>
-            </a></li>
+            </foreach>
         </ul>
     </div>
 </div>
