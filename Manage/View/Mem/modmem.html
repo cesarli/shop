@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="TMPL_MAN_CSS/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">表单</a></li>
+    </ul>
+    </div>
+
+    <div class="formbody">
+    
+    <div class="formtitle"><span>基本信息</span></div>
+    <form action="{:U('Mem/modmem','mem_id='.$mem_info['mem_id'])}" method="post">
+    <ul class="forminfo">
+        <li>
+            <label>客户姓名</label>
+            <input name="mem_name" type="text" class="dfinput" value="{$mem_info.mem_name}" />
+            <i></i>
+        </li>
+        <li>
+            <label>客户密码</label>
+            <input name="mem_pwd" type="text" class="dfinput" value="{$mem_info.mem_pwd}" />
+            <i></i>
+        </li>
+        <li>
+            <label>客户邮箱</label>
+            <input name="mem_email" type="text" class="dfinput" value="{$mem_info.mem_email}" />
+            <i></i>
+        </li>
+        <li>
+            <label>客户电话</label>
+            <input name="mem_phone" type="text" class="dfinput" value="{$mem_info.mem_phone}" />
+            <i></i>
+        </li>
+        <li>
+            <label>证件号码</label>
+            <input name="mem_id_card" type="text" class="dfinput" value="{$mem_info.mem_id_card}" />
+            <i></i>
+        </li>
+        <li>
+            <label>客户卡号</label>
+            <input name="mem_card_num" type="text" class="dfinput" value="{$mem_info.mem_card_num}" />
+            <i></i>
+        </li>
+        <li>
+            <label>客户积分</label>
+            <input name="mem_int" type="text" class="dfinput" value="{$mem_info.mem_int}" />
+            <i></i>
+        </li>
+        <li>
+            <label>客户类型</label>
+            <switch name="mem_info.mem_type">
+                <case value="1">
+                    <select name="mem_type" class="dfinput" >
+                        <option value="1" selected="selected">市级经销商</option>
+                        <option value="2">县级经销商</option>
+                        <option value="3">普通经销商</option>
+                        <option value="4">普通会员</option>
+                    </select>
+                </case>
+                <case value="2">
+                    <select name="mem_type" class="dfinput" >
+                        <option value="1">市级经销商</option>
+                        <option value="2" selected="selected">县级经销商</option>
+                        <option value="3">普通经销商</option>
+                        <option value="4">普通会员</option>
+                    </select>
+                </case>
+                <case value="3">
+                    <select name="mem_type" class="dfinput" >
+                        <option value="1">市级经销商</option>
+                        <option value="2">县级经销商</option>
+                        <option value="3" selected="selected">普通经销商</option>
+                        <option value="4">普通会员</option>
+                    </select>
+                </case>
+                <case value="4">
+                    <select name="mem_type" class="dfinput" >
+                        <option value="1">市级经销商</option>
+                        <option value="2">县级经销商</option>
+                        <option value="3">普通经销商</option>
+                        <option value="4" selected="selected">普通会员</option>
+                    </select>
+                </case>
+            </switch>
+            <i></i>
+        </li>
+        <li><label>&nbsp;</label><input name="" type="submit" class="btn" value="确认添加"/></li>
+    </ul>
+    </form>
+    
+    </div>
+</body>
+</html>
