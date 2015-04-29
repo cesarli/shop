@@ -4,6 +4,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
 <link href="TMPL_MAN_CSS/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="TMPL_MAN/editor/kindeditor.js"></script>
+    <script type="text/javascript">
+        KE.show({
+            id : 'content7',
+            cssPath : './index.css'
+        });
+    </script>
 </head>
 
 <body>
@@ -102,7 +109,8 @@
             <input name="goods_img_ori" type="file" />
         </li>
         <li>
-            <label>商品描述</label><textarea name="goods_des" style="width: 360px;height: 200px;"></textarea>
+            <label>商品描述</label>
+            <textarea id="content7" name="goods_des" style="width:700px;height:250px;visibility:hidden;"></textarea>
         </li>
     <li><label>&nbsp;</label><input name="" type="submit" class="btn" value="确认保存"/></li>
     </ul>

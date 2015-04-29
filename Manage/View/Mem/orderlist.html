@@ -6,17 +6,15 @@
 <link href="TMPL_MAN_CSS/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="TMPL_MAN_JS/jquery.js"></script>
 <script language="javascript">
-$(function(){
+$(function(){	
 	//导航切换
 	$(".imglist li").click(function(){
 		$(".imglist li.selected").removeClass("selected")
 		$(this).addClass("selected");
-	})
-})
+	})	
+})	
 </script>
-<script type="text/javascript">
 
-</script>
 </head>
 
 
@@ -40,42 +38,52 @@ $(function(){
         <li><span><img src="TMPL_MAN_IMAGES/t03.png" /></span>删除</li>
         <li><span><img src="TMPL_MAN_IMAGES/t04.png" /></span>统计</li>
         </ul>
+        
+        
         <ul class="toolbar1">
         <li><span><img src="TMPL_MAN_IMAGES/t05.png" /></span>设置</li>
         </ul>
     
     </div>
-
+    
     <table class="imgtable">
     
     <thead>
     <tr>
-    <th>ID</th>
-    <th>栏目名称</th>
-    <th>排序编号</th>
-    <th>是否显示</th>
-    <th>操作</th>
+        <th>姓名</th>
+        <th>卡号</th>
+        <th>开始时间</th>
+        <th>结束时间</th>
+        <th>销售金额</th>
+        <th>客户类型</th>
+        <th>客户积分</th>
+        <th>操作</th>
     </tr>
     </thead>
     
     <tbody>
-    <foreach name="bar_info" item="bar" >
+    <foreach name="order_info" item="order" >
     <tr>
-    <td class="height50">{$bar.bar_id}</td>
-    <td class="height50">{$bar.bar_name}</td>
-    <td class="height50">{$bar.bar_sort}</td>
-    <td class="height50">
-        <if condition="$bar.is_show eq 1">
-            是
-        <else />
-            否
-        </if>
-    </td>
-    <td class="height50" style="width: 200px">
-        <ul class="operation">
-            <a href="{:U('Company/modTitle','bar_id='.$bar['bar_id'])}"><li class="click"><span><img src="TMPL_MAN_IMAGES/t02.png" /></span>修改</li></a>
-        </ul>
-    </td>
+        <td class="height50">{$order.mem_name}</td>
+        <td class="height50">{$order.mem_card_num}</td>
+        <td class="height50">{$order.start_time|date="Y-m-d",###}</td>
+        <td class="height50">{$order.end_time|date="Y-m-d",###}</td>
+        <td class="height50">{$order.sale_price}</td>
+        <td class="height50">
+            <switch name="order.mem_type">
+                <case value="1">市级经销商</case>
+                <case value="2">县级经销商</case>
+                <case value="3">普通经销商</case>
+                <case value="4">普通会员</case>
+            </switch>
+        </td>
+        <td class="height50">{$order.mem_int}</td>
+        <td class="height50" style="width: 300px">
+            <ul class="operation">
+                <a href="{:U('Mem/modOrder','order_id='.$order['order_id'])}"><li class="click"><span><img src="TMPL_MAN_IMAGES/t02.png" /></span>修改</li></a>
+                <a href="{:U('Mem/delOrder','order_id='.$order['order_id'])}"> <li><span><img src="TMPL_MAN_IMAGES/t03.png" /></span>删除</li></a>
+            </ul>
+        </td>
     </tr>
     </foreach>
     
@@ -83,8 +91,9 @@ $(function(){
     
     </table>
 
+   
     <div class="pagin">
-    	<div class="message">共<i class="blue">1256</i>条记录，当前显示第&nbsp;<i class="blue">2&nbsp;</i>页</div>
+    	<div class="message">共<i class="blue">{:count($goods_info)}</i>条记录，当前显示第&nbsp;<i class="blue">1&nbsp;</i>页</div>
         <ul class="paginList">
         <li class="paginItem"><a href="javascript:;"><span class="pagepre"></span></a></li>
         <li class="paginItem"><a href="javascript:;">1</a></li>
@@ -97,6 +106,8 @@ $(function(){
         <li class="paginItem"><a href="javascript:;"><span class="pagenxt"></span></a></li>
         </ul>
     </div>
+    
+    
     <div class="tip">
     	<div class="tiptop"><span>提示信息</span><a></a></div>
         
@@ -112,8 +123,10 @@ $(function(){
         <input name="" type="button"  class="sure" value="确定" />&nbsp;
         <input name="" type="button"  class="cancel" value="取消" />
         </div>
+    
     </div>
     </div>
+    
     <div class="tip">
     	<div class="tiptop"><span>提示信息</span><a></a></div>
         
