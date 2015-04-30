@@ -1,76 +1,55 @@
 <extend name="Base:model" />
 <block name="main">
-<div id="subbanner">
-    <div class="subimg"><img src="TMPL_HOME_IMAGES/sonbanner01.jpg" width="1440" height="199" /></div>
-</div>
-<div id="sonmain">
-    <div class="sonmainbox">
-        <div class="sontips">
-            <div class="sonname">
-                <div class="sonnamebg"><img src="TMPL_HOME_IMAGES/tt01.jpg" /></div>
-            </div>
-            <div class="loaction">
-                <ul>
-                    <li>良仓动态</li>
-                    <li>-</li>
-                    <li><a href="#">关于食仓</a></li>
-                    <li>-</li>
-                    <li><a href="#">首页</a></li>
-                    <li>当前位置：</li>
-                    <li><img src="TMPL_HOME_IMAGES/028.png" /></li>
-                </ul>
-            </div>
-        </div>
-        <div class="subbody">
-            <div class="subside">
-                <div class="sidemenu">
+    <div id="subbanner">
+        <div class="subimg"><img src="TMPL_HOME_IMAGES/sonbanner01.jpg" width="1440" height="199" /></div>
+    </div>
+    <div id="sonmain">
+        <div class="sonmainbox">
+            <div class="sontips">
+                <div class="sonname">
+                    <div class="sonnamebg"><img src="TMPL_HOME_IMAGES/tt01.jpg" /></div>
+                </div>
+                <div class="loaction">
                     <ul>
-                        <li class="sonmenu"><a href="about.html"><span>良仓简介</span></a></li>
-                        <li class="sonmenu"><a href="#"><span>品牌建设</span></a></li>
-                        <li class="sonmenu"><a href="#"><span>企业荣誉</span></a></li>
-                        <li class="sonmenu"><a href="#"><span>企业文化</span></a></li>
-                        <li class="sonmenua"><a href="#"><span>良仓动态</span></a></li>
+                        <li>盛峰宏物动态</li>
+                        <li>-</li>
+                        <li><a href="#">关于食仓</a></li>
+                        <li>-</li>
+                        <li><a href="#">首页</a></li>
+                        <li>当前位置：</li>
+                        <li><img src="TMPL_HOME_IMAGES/028.png" /></li>
                     </ul>
                 </div>
-                <div class="side_contact">
-                    <div class="sideimgtle"><img src="TMPL_HOME_IMAGES/123.jpg" /></div>
-                    <div class="sidecontactbody"><h1>服务热线电话：</h1>
-                        <h2>023-<span>45685426</span></h2>
-                        <h3>地址：四川省达州市</h3>
+            </div>
+            <div class="subbody">
+                <div class="subside">
+                    <div class="sidemenu">
+                        <ul>
+                            <li class="sonmenu"><a href="#"><span>新闻动态</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="side_contact">
+                        <div class="sideimgtle"><img src="TMPL_HOME_IMAGES/123.jpg" /></div>
+                        <div class="sidecontactbody"><h1>服务热线电话：</h1>
+                            <h2>023-<span>45685426</span></h2>
+                            <h3>地址：四川省达州市</h3>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="subcontent">
-                <div class="actle"><span class="title_son"><span>良</span>仓动态</span></div>
-                <div class="mainarticle">
-                    <div class="article_list">
-                        <ul>
-                            <li><a href="article.html">2012-04-05 公司组织业余娱乐集体活动氛围轻...</a></li>
-                            <li><a href="#">2012-04-05 公司组织业余娱乐集体活动氛围轻...</a></li>
-                            <li><a href="#">2012-04-05 公司组织业余娱乐集体活动氛围轻...</a></li>
-                            <li><a href="#">2012-04-05 公司组织业余娱乐集体活动氛围轻...</a></li>
-                            <li><a href="#">2012-04-05 公司组织业余娱乐集体活动氛围轻...</a></li>
-                            <li><a href="#">2012-04-05 公司组织业余娱乐集体活动氛围轻...</a></li>
-                            <li><a href="#">2012-04-05 公司组织业余娱乐集体活动氛围轻...</a></li>
-                            <li><a href="#">2012-04-05 公司组织业余娱乐集体活动氛围轻...</a></li>
-                            <li><a href="#">2012-04-05 公司组织业余娱乐集体活动氛围轻...</a></li>
-                            <li><a href="#">2012-04-05 公司组织业余娱乐集体活动氛围轻...</a></li>
-                        </ul>
+                <div class="subcontent">
+                    <div class="actle"><span class="title_son"><span>良</span>仓动态</span></div>
+                    <div class="mainarticle">
+                        <div class="article_list">
+                            <ul>
+                                <foreach name="article_info" item="at" >
+                                    <li><a href="#">{$at.at_title}</a></li>
+                                </foreach>
+                            </ul>
+                        </div>
+                        {$page}
                     </div>
-                    <div class="page">
-                        <ul>
-                            <li><a href="#">首页</a></li>
-                            <li><a href="#">上一页</a></li>
-                            <li class="page_na"><a href="#"><span>1</span></a></li>
-                            <li class="page_n"><a href="#"><span>2</span></a></li>
-                            <li><a href="#">下一页</a></li>
-                            <li><a href="#">尾页</a></li>
-                        </ul>
-                    </div>
-
                 </div>
             </div>
         </div>
     </div>
-</div>
 </block>
