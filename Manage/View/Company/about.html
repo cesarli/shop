@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <link href="TMPL_MAN_CSS/style.css" rel="stylesheet" type="text/css" />
+    <link href="TMPL_MAN_CSS/select.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="TMPL_MAN_JS/jquery.js"></script>
+    <script type="text/javascript" src="TMPL_MAN_JS/jquery.idTabs.min.js"></script>
+    <script type="text/javascript" src="TMPL_MAN_JS/select-ui.min.js"></script>
+    <script type="text/javascript" src="TMPL_MAN/editor/kindeditor.js"></script>
+
+    <script type="text/javascript">
+        KE.show({
+            id : 'content7',
+            cssPath : './index.css'
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function(e) {
+            $(".select1").uedSelect({
+                width : 345
+            });
+            $(".select2").uedSelect({
+                width : 167
+            });
+            $(".select3").uedSelect({
+                width : 100
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+        <li><a href="#">首页</a></li>
+        <li><a href="#">系统设置</a></li>
+    </ul>
+</div>
+
+<div class="formbody">
+
+    <div id="usual1" class="usual">
+        <form action="{:U('Company/about')}" method="post" enctype="multipart/form-data">
+            <div id="tab1" class="tabson">
+                <ul class="forminfo">
+                    <li><label>公司简介<b>*</b></label>
+
+                        <textarea id="content7" name="con_desc" style="width:700px;height:250px;visibility:hidden;">{$con_info.con_desc}</textarea>
+
+                    </li>
+                    <li><label>&nbsp;</label><input name="" type="submit" class="btn" value="马上发布"/></li>
+                </ul>
+            </div>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        $("#usual1 ul").idTabs();
+    </script>
+
+    <script type="text/javascript">
+        $('.tablelist tbody tr:odd').addClass('odd');
+    </script>
+
+
+
+
+
+</div>
+
+
+<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+</body>
+</html>

@@ -16,6 +16,9 @@ class CompanyController extends BaseController {
     }
     public function part()
     {
+        $config_model = M('Config');
+        $about = $config_model->where("con_name = 'about'")->find();
+        $this->assign('about',$about);
         $this->display('about');
     }
 }

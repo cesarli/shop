@@ -1,79 +1,53 @@
 <extend name="Base:model" />
 <block name="main">
-<div id="subbanner">
-  <div class="subimg"><img src="TMPL_HOME_IMAGES/sonbanner02.jpg" width="1440" height="199" /></div>
-</div>
-<div id="sonmain">
-  <div class="sonmainbox">
-    <div class="sontips">
-      <div class="sonname">
-        <div class="sonnamebg"><img src="TMPL_HOME_IMAGES/tt02.jpg" /></div>
-      </div>
-      <div class="loaction">
-        <ul>
-          <li>合作伙伴</li>
-          <li>-</li>
-          <li><a href="#">首页</a></li>
-          <li>当前位置：</li>
-          <li><img src="TMPL_HOME_IMAGES/028.png" /></li>
-        </ul>
-      </div>
+    <div id="subbanner">
+        <div class="subimg"><img src="TMPL_HOME_IMAGES/sonbanner02.jpg" width="1440" height="199" /></div>
     </div>
-    <div class="subbody">
-      <div class="subside">
-        <div class="sidemenu">
-          <ul>
-            <li class="sonmenu"><a href="devel.html"><span>关于盛峰宏物开发</span></a></li>
-            <li class="sonmenu"><a href="devel_shows.html"><span>项目展示</span></a></li>
-            <li class="sonmenua"><a href="devel_part.html"><span>合作伙伴</span></a></li>
-          </ul>
-        </div>
-        <div class="side_contact">
-        	<div class="sideimgtle"><img src="TMPL_HOME_IMAGES/123.jpg" /></div>
-            <div class="sidecontactbody"><h1>服务热线电话：</h1>
-            <h2>023-<span>45685426</span></h2>
-            <h3>地址：四川省达州市</h3>
+    <div id="sonmain">
+        <div class="sonmainbox">
+            <div class="sontips">
+                <div class="sonname">
+                    <div class="sonnamebg"><img src="TMPL_HOME_IMAGES/tt01.jpg" /></div>
+                </div>
+                <div class="loaction">
+                    <ul>
+                        <li>合作伙伴</li>
+                        <li>-</li>
+                        <li><a href="{:U('Index/index')}">首页</a></li>
+                        <li>当前位置：</li>
+                        <li><img src="TMPL_HOME_IMAGES/028.png" /></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="subbody">
+                <div class="subside">
+                    <div class="sidemenu">
+                        <ul>
+                            <li class="sonmenua"><a href="devel_part.html"><span>合作伙伴</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="side_contact">
+                        <div class="sideimgtle"><img src="TMPL_HOME_IMAGES/123.jpg" /></div>
+                        <div class="sidecontactbody"><h1>服务热线电话：</h1>
+                            <h2><span>130 6433 9618</span></h2>
+                            <h3>地址：四川省达州市</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="subcontent">
+                    <div class="actle"><span class="title_son"><span>合</span>作伙伴</span></div>
+                    <div class="article_listpic02">
+                        <ul>
+                            <foreach name="f_info" item="info" >
+                                <li>
+                                    <div class="listpic02"><a href="#"><img src="TMPL_HOME_IMAGES/logoimg.jpg" /></a></div>
+                                    <div class="listpic02_tt"><a href="#">{$info.f_name}</a></div>
+                                </li>
+                            </foreach>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-      </div>
-      <div class="subcontent">
-        <div class="actle"><span class="title_son"><span>合</span>作伙伴</span></div>
-        <div class="article_listpic02">
-        	<ul>
-            	<li>
-                	<div class="listpic02"><a href="#"><img src="TMPL_HOME_IMAGES/logoimg.jpg" /></a></div>
-                    <div class="listpic02_tt"><a href="#">合作伙伴名称</a></div>
-              </li>  
-              <li>
-                	<div class="listpic02"><a href="#"><img src="TMPL_HOME_IMAGES/logoimg.jpg" /></a></div>
-                    <div class="listpic02_tt"><a href="#">合作伙伴名称</a></div>
-              </li>
-              <li>
-                	<div class="listpic02"><a href="#"><img src="TMPL_HOME_IMAGES/logoimg.jpg" /></a></div>
-                    <div class="listpic02_tt"><a href="#">合作伙伴名称</a></div>
-              </li>
-              <li>
-                	<div class="listpic02"><a href="#"><img src="TMPL_HOME_IMAGES/logoimg.jpg" /></a></div>
-                    <div class="listpic02_tt"><a href="#">合作伙伴名称</a></div>
-              </li>
-              <li>
-                	<div class="listpic02"><a href="#"><img src="TMPL_HOME_IMAGES/logoimg.jpg" /></a></div>
-                    <div class="listpic02_tt"><a href="#">合作伙伴名称</a></div>
-              </li>              
-            </ul>
-        </div>
-        <div class="page">
-            	<ul>
-                	<li><a href="#">首页</a></li>
-                    <li><a href="#">上一页</a></li>
-                    <li class="page_na"><a href="#"><span>1</span></a></li>
-                    <li class="page_n"><a href="#"><span>2</span></a></li>
-                    <li><a href="#">下一页</a></li>
-                    <li><a href="#">尾页</a></li>
-                </ul>
-            </div>
-      </div>
     </div>
-  </div>
-</div>
 </block>
