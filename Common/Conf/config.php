@@ -10,6 +10,7 @@ return array(
         'TMPL_MAN_IMAGES'     => '/Public/Manage/images',
         'TMPL_MAN'     => '/Public/Manage',
     ),
+    'URL_CASE_INSENSITIVE' =>true,
     'URL_HTML_SUFFIX'=>'',
     'MULTI_MODULE'          =>  false,
     'DEFAULT_MODULE'        =>  'Home',
