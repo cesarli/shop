@@ -7,7 +7,7 @@
         <div class="sonmainbox">
             <div class="sontips">
                 <div class="sonname">
-                    <div class="sonnamebg"><img src="TMPL_HOME_IMAGES/tt03.jpg" /></div>
+                    <div class="sonnamebg"><img src="TMPL_HOME_IMAGES/tt01.jpg" /></div>
                 </div>
                 <div class="loaction">
                     <ul>
@@ -25,6 +25,7 @@
                 <div class="subside">
                     <div class="sidemenu">
                         <ul>
+                            <li class="sonmenu"><a href="{:U('/Product/plist')}"><span>所有商品</span></a></li>
                             <foreach name="class" item="cla" >
                                 <li class="sonmenu"><a href="{:U('/Product/plist','cid='.$cla['class_id'])}"><span>{$cla.class_name}</span></a></li>
                             </foreach>

@@ -41,6 +41,9 @@ class ProductController extends BaseController {
         $this->display('plist');
     }
     public function instance(){
+        $model = M('friend');
+        $f_info = $model->order('sort desc')->select();
+        $this->assign('f_info',$f_info);
         $this->display('instance');
     }
 }

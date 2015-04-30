@@ -47,6 +47,8 @@ body { margin:0; }
 .news { width:290px; height:110px; float:right;}
 .news_tle { width:290px; height:17px; background:url(../images/i_newstle.png) no-repeat;}
 .news_tle span{ display:block;  width:39px; height:7px; float:right; margin:8px 10px 0 0;}
+.sale_tle { width:290px; height:17px; background:url(../images/sale.jpg) no-repeat;}
+.sale_tle span{ display:block;  width:39px; height:7px; float:right; margin:8px 10px 0 0;}
 .news_list { width:290px; height:auto; float:left; margin-top:10px; }
 .news_list ul li { width:290px; height:26px; border-bottom:#ccc 1px dotted; background:url(../images/icon00.png) no-repeat 5px 10px;}
 .news_list ul li span { }
@@ -63,7 +65,7 @@ body { margin:0; }
 /*---------��ҳ------------------------------------------------\\\\-----------*/
 
 #subbanner { width:auto; height:199px;  margin:0 auto; }
-.subimg {  width:auto; height:199px; margin:0 auto;}
+.subimg {  width:1440px; height:199px; margin:0 auto;}
 
 /*----------*/
 #sonmain { width:auto; height:auto; background:url(../images/mainbodybg.jpg) repeat-x top;}

@@ -13,7 +13,7 @@ class BaseController extends Controller
     {
         $model = M('bar');
         $bar_list = $model->where('is_show = 1')->order('bar_sort asc')->select();
-        $config_model = M('SystemConfig');
+        $config_model = M('Config');
         $title_info = $config_model->where("con_name = 'site_title'")->find();
         $this->assign('title_info',$title_info);
         $this->assign('bar_list',$bar_list);

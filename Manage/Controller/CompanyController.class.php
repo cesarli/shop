@@ -3,6 +3,92 @@ namespace Manage\Controller;
 use Think\Controller;
 class CompanyController extends BaseController {
 
+    public function active()
+    {
+        $model = M('Active');
+        $result = $model->order('sort asc')->select();
+        $this->assign('active_info',$result);
+        $this->display('active');
+    }
+    public function delActive($at_id)
+    {
+        $GoodsClass = M('Active');
+        if($GoodsClass->delete($at_id)){
+            $this->success('删除成功');
+        }else{
+            $this->error('删除失败');
+        }
+    }
+    public function modActive($at_id)
+    {
+        if(IS_POST){
+            $model = M('Active');
+            $title = I('post.title','');
+            $content = I('post.content','');
+            $sort = I('post.sort',50);
+            $model->create(array(
+                'a_id' => $at_id,
+                'title' => $title,
+                'content' => $content,
+                'sort' => $sort
+            ));
+            if($model->save()){
+                $this->success('更改完成',U('Company/active'));
+            }else{
+                $this->error('更改失败');
+            }
+            exit;
+        }
+        $model = M('Active');
+        $result = $model->where('a_id ='.$at_id)->find();
+        $this->assign('active',$result);
+        $this->display('modactive');
+    }
+
+    public function addActive()
+    {
+        if(IS_POST){
+            $model = M('Active');
+            $title = I('post.title','');
+            $content = I('post.content','');
+            $sort = I('post.sort',50);
+            $model->create(array(
+                'title' => $title,
+                'content' => $content,
+                'sort' => $sort
+            ));
+            if($model->add()){
+                $this->success('添加完成',U('Company/addActive'));
+            }else{
+                $this->error('添加失败,请检查数据是否输入完整或者含有特殊字符');
+            }
+            exit;
+        }
+        $this->display('addactive');
+    }
+
+    public function about()
+    {
+        if(IS_POST){
+            $model = M('Config');
+            $con_desc = I('post.con_desc','');
+            $model->create(array(
+                'config_id' => 2,
+                'con_desc' => $con_desc,
+            ));
+            if($model->save()){
+                $this->success('修改完成');
+            }else{
+                $this->error('修改失败');
+            }
+            exit;
+        }
+        $model = M('Config');
+        $result = $model->where('config_id = 2')->find();
+        $this->assign('con_info',$result);
+        $this->display('about');
+    }
+
     public function addArticle()
     {
         if(IS_POST){
