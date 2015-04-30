@@ -13,7 +13,7 @@
                     <ul>
                         <li>产品推荐</li>
                         <li>-</li>
-                        <li><a href="#">良仓金融</a></li>
+                        <li><a href="#">盛峰宏物</a></li>
                         <li>-</li>
                         <li><a href="#">首页</a></li>
                         <li>当前位置：</li>
@@ -25,25 +25,26 @@
                 <div class="subside">
                     <div class="sidemenu">
                         <ul>
-                            <li class="sonmenu"><a href="finance.html"><span>关于良仓金融</span></a></li>
-                            <li class="sonmenua"><a href="finance_dj.html"><span>产品推荐</span></a></li>
+                            <foreach name="class" item="cla" >
+                                <li class="sonmenu"><a href="{:U('/Product/plist','cid='.$cla['class_id'])}"><span>{$cla.class_name}</span></a></li>
+                            </foreach>
                         </ul>
                     </div>
                     <div class="side_contact">
                         <div class="sideimgtle"><img src="TMPL_HOME_IMAGES/123.jpg" /></div>
                         <div class="sidecontactbody"><h1>服务热线电话：</h1>
-                            <h2>023-<span>45685426</span></h2>
+                            <h2><span>130 6433 9618</span></h2>
                             <h3>地址：四川省达州市</h3>
                         </div>
                     </div>
                 </div>
                 <div class="subcontent">
-                    <div class="actle"><span class="title_son"><span>关</span>于良仓金融</span></div>
+                    <div class="actle"><span class="title_son">产品列表</span></div>
                     <div class="article_listpic03">
                         <ul>
                             <foreach name="goods_info" item="goods" >
                                 <li>
-                                    <div class="listpic03"><a href="#"><img src="/{$goods.goods_img_ori}" /></a></div>
+                                    <div class="listpic03"><a href="#"><img src="/Uploads/{$goods.goods_img_ori}" /></a></div>
                                     <div class="listpic03_tt"><a href="#">{$goods.goods_name}</a>
                                         <h2></h2>
                                     </div>
