@@ -9,7 +9,7 @@ class MemController extends BaseController {
         $sql = "SELECT m.mem_name,m.mem_card_num,m.mem_type,m.mem_int,o.* FROM `order` AS o LEFT JOIN `mem` AS m ON m.mem_card_num = o.mem_card_num";
         $order_info = $Model->query($sql);
         $this->assign('order_info',$order_info);
-        $this->display();
+        $this->display('orderlist');
     }
     public function delOrder($order_id)
     {
@@ -45,7 +45,7 @@ class MemController extends BaseController {
         $model = M('Order');
         $order_info = $model->where("order_id = '%d'",array($order_id))->find();
         $this->assign('order_info',$order_info);
-        $this->display();
+        $this->display('modorder');
     }
 
     public function addOrder()
@@ -69,7 +69,7 @@ class MemController extends BaseController {
             }
             exit;
         }
-        $this->display();
+        $this->display('addorder');
     }
     public function modMem($mem_id)
     {
@@ -179,6 +179,6 @@ class MemController extends BaseController {
         $model = M('Mem');
         $result = $model->order('mem_id desc')->select();
         $this->assign('mem_info',$result);
-        $this->display();
+        $this->display('memlist');
     }
 }

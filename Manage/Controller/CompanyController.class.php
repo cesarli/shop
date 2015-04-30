@@ -26,7 +26,7 @@ class CompanyController extends BaseController {
             }
             exit;
         }
-        $this->display();
+        $this->display('addarticle');
     }
     public function modArticle($at_id)
     {
@@ -55,7 +55,7 @@ class CompanyController extends BaseController {
         $model = M('Article');
         $result = $model->where('at_id ='.$at_id)->order('at_id asc')->find();
         $this->assign('at_info',$result);
-        $this->display();
+        $this->display('modarticle');
     }
     public function delArticle($at_id)
     {
@@ -71,7 +71,7 @@ class CompanyController extends BaseController {
         $model = M('Article');
         $result = $model->field('at_id,at_title,at_author,create_time,is_show')->order('at_id asc')->select();
         $this->assign('article_info',$result);
-        $this->display();
+        $this->display('articlelist');
     }
     public function title()
     {
