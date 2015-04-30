@@ -83,6 +83,12 @@ class MemController extends BaseController {
             $mem_card_num = I('post.mem_card_num',0);
             $mem_type = I('post.mem_type',0);
             $mem_int = I('post.mem_int',0);
+            $is_show_ct = I('post.is_show_ct',0);
+            $is_show_cu = I('post.is_show_cu',0);
+            $is_show_ag = I('post.is_show_ag',0);
+            $is_show_mem = I('post.is_show_mem',0);
+            $is_show_price = I('post.is_show_price',0);
+            $is_show_disc = I('post.is_show_disc',0);
             $data = array(
                 'mem_id' => $mem_id,
                 'mem_name' => $mem_name,
@@ -93,6 +99,12 @@ class MemController extends BaseController {
                 'mem_card_num' => $mem_card_num,
                 'mem_type' => $mem_type,
                 'mem_int' => $mem_int,
+                'is_show_ct' => $is_show_ct,
+                'is_show_cu' => $is_show_cu,
+                'is_show_ag' => $is_show_ag,
+                'is_show_mem' => $is_show_mem,
+                'is_show_price' => $is_show_price,
+                'is_show_disc' => $is_show_disc,
                 'create_time' => time()
             );
             if($model->save($data)){
@@ -128,6 +140,12 @@ class MemController extends BaseController {
             $mem_card_num = I('post.mem_card_num',0);
             $mem_type = I('post.mem_type',0);
             $mem_int = I('post.mem_int',0);
+            $is_show_ct = I('post.is_show_ct',0);
+            $is_show_cu = I('post.is_show_cu',0);
+            $is_show_ag = I('post.is_show_ag',0);
+            $is_show_mem = I('post.is_show_mem',0);
+            $is_show_price = I('post.is_show_price',0);
+            $is_show_disc = I('post.is_show_disc',0);
             $data = array(
                 'mem_name' => $mem_name,
                 'mem_pwd' => $mem_pwd,
@@ -137,6 +155,12 @@ class MemController extends BaseController {
                 'mem_card_num' => $mem_card_num,
                 'mem_type' => $mem_type,
                 'mem_int' => $mem_int,
+                'is_show_ct' => $is_show_ct,
+                'is_show_cu' => $is_show_cu,
+                'is_show_ag' => $is_show_ag,
+                'is_show_mem' => $is_show_mem,
+                'is_show_price' => $is_show_price,
+                'is_show_disc' => $is_show_disc,
                 'create_time' => time()
             );
 

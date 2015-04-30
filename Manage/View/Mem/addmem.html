@@ -19,7 +19,7 @@
     <div class="formbody">
     
     <div class="formtitle"><span>基本信息</span></div>
-    <form action="{:U('Mem/addOrder')}" method="post">
+    <form action="{:U('Mem/addmem')}" method="post">
     <ul class="forminfo">
         <li>
             <label>客户姓名</label>
@@ -64,6 +64,90 @@
                 <option value="3">普通经销商</option>
                 <option value="4" selected="selected">普通会员</option>
             </select>
+            <i></i>
+        </li>
+        <li>
+            <label>是否显示市经价</label>
+            <cite>
+                <label>&nbsp;&nbsp;&nbsp;
+                    <input name="is_show_ct" type="radio" value="1" />
+                    是
+                </label>
+                <label>
+                    <input name="is_show_ct" type="radio" value="0" checked="checked" />
+                    否
+                </label>
+            </cite>
+            <i></i>
+        </li>
+        <li>
+            <label>是否显示县经价</label>
+            <cite>
+                <label>&nbsp;&nbsp;&nbsp;
+                    <input name="is_show_cu" type="radio" value="1" />
+                    是
+                </label>
+                <label>
+                    <input name="is_show_cu" type="radio" value="0" checked="checked" />
+                    否
+                </label>
+            </cite>
+            <i></i>
+        </li>
+        <li>
+            <label>是否显示普经价</label>
+            <cite>
+                <label>&nbsp;&nbsp;&nbsp;
+                    <input name="is_show_ag" type="radio" value="1" />
+                    是
+                </label>
+                <label>
+                    <input name="is_show_ag" type="radio" value="0" checked="checked" />
+                    否
+                </label>
+            </cite>
+            <i></i>
+        </li>
+        <li>
+            <label>是否显示会员价</label>
+            <cite>
+                <label>&nbsp;&nbsp;&nbsp;
+                    <input name="is_show_mem" type="radio" value="1" />
+                    是
+                </label>
+                <label>
+                    <input name="is_show_mem" type="radio" value="0" checked="checked" />
+                    否
+                </label>
+            </cite>
+            <i></i>
+        </li>
+        <li>
+            <label>是否显示零售价</label>
+            <cite>
+                <label>&nbsp;&nbsp;&nbsp;
+                    <input name="is_show_price" type="radio" value="1" checked="checked" />
+                    是
+                </label>
+                <label>
+                    <input name="is_show_price" type="radio" value="0"  />
+                    否
+                </label>
+            </cite>
+            <i></i>
+        </li>
+        <li>
+            <label>是否显示促销价</label>
+            <cite>
+                <label>&nbsp;&nbsp;&nbsp;
+                    <input name="is_show_disc" type="radio" value="1" />
+                    是
+                </label>
+                <label>
+                    <input name="is_show_disc" type="radio" value="0" checked="checked" />
+                    否
+                </label>
+            </cite>
             <i></i>
         </li>
         <li><label>&nbsp;</label><input name="" type="submit" class="btn" value="确认添加"/></li>
