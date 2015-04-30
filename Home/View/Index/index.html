@@ -31,7 +31,7 @@
                         <div class="news_list">
                             <ul>
                                 <foreach name="art_info" item="at" >
-                                    <li><a href="#">{$at.at_title}</a></li>
+                                    <li><a href="{:U('Company/article','at_id='.$at['at_id'])}">{$at.at_title}</a></li>
                                 </foreach>
                             </ul>
                         </div>
@@ -45,7 +45,7 @@
                         <div class="news_list">
                             <ul>
                                 <foreach name="active_info" item="at" >
-                                    <li><a href="#">{$at.title}</a></li>
+                                    <li><a href="{:U('Company/active','a_id='.$at['a_id'])}">{$at.title}</a></li>
                                 </foreach>
                             </ul>
                         </div>

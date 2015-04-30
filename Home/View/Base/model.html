@@ -26,6 +26,11 @@
     <div class="topmain">
         <div class="logo"><img src="TMPL_HOME_IMAGES/logo.png" alt="logo" /></div>
         <div class="serach">
+            <if condition="$is_login eq 1 ">
+                <div class="login"><a href="#">你好，{$mem_name}</a> &nbsp;&nbsp;&nbsp;申请注册</div>
+                <else />
+                <div class="login"><a href="{:U('Index/login')}">请登录</a> &nbsp;&nbsp;&nbsp;申请注册</div>
+            </if>
             <ul>
                 <li class="ser01">
                     <input class="ser_box" type="text" />
@@ -39,10 +44,10 @@
     <div class="nav_main">
         <ul>
             <foreach name="bar_list" item="bar" >
-            <?php $controller = $bar['controller'];$action = $bar['action']; $full = $controller.'/'.$action; ?>
-            <li class="menu"><a href="{:U($full)}">
-                <h2>{$bar.bar_name}</h2>
-            </a></li>
+                <?php $controller = $bar['controller'];$action = $bar['action']; $full = $controller.'/'.$action; ?>
+                <li class="menu"><a href="{:U($full)}">
+                    <h2>{$bar.bar_name}</h2>
+                </a></li>
             </foreach>
         </ul>
     </div>

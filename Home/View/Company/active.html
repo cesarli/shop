@@ -1,7 +1,7 @@
 <extend name="Base:model" />
 <block name="main">
     <div id="subbanner">
-        <div class="subimg"><img src="TMPL_HOME_IMAGES/sonbanner03.jpg" width="1440" height="199" /></div>
+        <div class="subimg"><img src="TMPL_HOME_IMAGES/sonbanner01.jpg" width="1440" height="199" /></div>
     </div>
     <div id="sonmain">
         <div class="sonmainbox">
@@ -11,9 +11,7 @@
                 </div>
                 <div class="loaction">
                     <ul>
-                        <li>产品推荐</li>
-                        <li>-</li>
-                        <li><a href="#">盛峰宏物</a></li>
+                        <li>正文</li>
                         <li>-</li>
                         <li><a href="#">首页</a></li>
                         <li>当前位置：</li>
@@ -25,10 +23,7 @@
                 <div class="subside">
                     <div class="sidemenu">
                         <ul>
-                            <li class="sonmenu"><a href="{:U('/Product/plist')}"><span>所有商品</span></a></li>
-                            <foreach name="class" item="cla" >
-                                <li class="sonmenu"><a href="{:U('/Product/plist','cid='.$cla['class_id'])}"><span>{$cla.class_name}</span></a></li>
-                            </foreach>
+                            <li class="sonmenua"><a href="#"><span>新闻动态</span></a></li>
                         </ul>
                     </div>
                     <div class="side_contact">
@@ -40,20 +35,16 @@
                     </div>
                 </div>
                 <div class="subcontent">
-                    <div class="actle"><span class="title_son">产品列表</span></div>
-                    <div class="article_listpic03">
-                        <ul>
-                            <foreach name="goods_info" item="goods" >
-                                <li>
-                                    <div class="listpic03"><a href="{:U('/Product/detail','pid='.$goods['goods_id'])}"><img src="/Uploads/{$goods.goods_img_ori}" /></a></div>
-                                    <div class="listpic03_tt"><a href="#">{$goods.goods_name}</a>
-                                        <h2></h2>
-                                    </div>
-                                </li>
-                            </foreach>
-                        </ul>
+                    <div class="actle"><span class="title_son"><span>优</span>惠活动</span></div>
+                    <div class="mainarticle">
+                        <div class="article_body">
+                            <h1>{$article_info.title}</h1>
+                            <div class="article_body_t">
+                                {:htmlspecialchars_decode($article_info['content'])}
+                            </div>
+                        </div>
+
                     </div>
-                    {$page}
                 </div>
             </div>
         </div>

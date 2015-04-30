@@ -2,6 +2,26 @@
 namespace Home\Controller;
 use Think\Controller;
 class ProductController extends BaseController {
+
+    public function detail($pid)
+    {
+        $goods_id = intval($pid);
+        $model = M('Goods');
+        $result = $model->where('goods_id ='.$goods_id)->find();
+        $show_price = 0;
+        if(session('is_login')){
+            $mem_model = M('mem');
+            $mem_info = $mem_model->getByMemId(session('mem_id'));
+            $show_price = 1;
+        }else{
+            $mem_info = '';
+        }
+        $this->assign('mem_info',$mem_info);
+        $this->assign('show_price',$show_price);
+        $this->assign('goods_info',$result);
+        $this->display('detail');
+    }
+
     public function plist(){
         $model = M('GoodsClass');
         $class = $model->where('is_show = 1')->order('sort desc')->select();

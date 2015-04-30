@@ -52,13 +52,13 @@ $(function(){
     <thead>
     <tr>
         <th>商品名称</th>
-        <th>商品库存</th>
         <th>商品分类</th>
         <th>是否上架</th>
-        <th>市场价格</th>
-        <th>零售价格</th>
-        <th>会员价格</th>
+        <th>市经价格</th>
+        <th>县经价格</th>
         <th>经销商价</th>
+        <th>会员价格</th>
+        <th>零售价格</th>
         <th>是否促销</th>
         <th>促销价格</th>
         <th>商品排序</th>
@@ -70,7 +70,6 @@ $(function(){
     <foreach name="goods_info" item="goods" >
     <tr>
         <td class="height50">{$goods.goods_name}</td>
-        <td class="height50">{$goods.goods_num}</td>
         <td class="height50">{$goods.goods_class}</td>
         <td class="height50">
             <if condition="$goods.is_on_sale eq 1">
@@ -79,10 +78,11 @@ $(function(){
                 否
             </if>
         </td>
-        <td class="height50">{$goods.goods_mar_price}</td>
-        <td class="height50">{$goods.goods_price}</td>
-        <td class="height50">{$goods.goods_mem_price}</td>
+        <td class="height50">{$goods.goods_ct_price}</td>
+        <td class="height50">{$goods.goods_cu_price}</td>
         <td class="height50">{$goods.goods_ag_price}</td>
+        <td class="height50">{$goods.goods_mem_price}</td>
+        <td class="height50">{$goods.goods_price}</td>
         <td class="height50">
             <if condition="$goods.is_discount eq 1">
                 是
